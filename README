@@ -1,0 +1,22 @@
+= File structure =
+* index.php - starting point of the application
+
+* /src/MoneyChanger - app core folder
+
+* /src/MoneyChanger/test.php - test script to be run from console with sample data to test key methods.
+ It's because I had problems in this app to implements PHPUnit and I was running out of time.
+
+
+
+
+= App logic description =
+Simple PHP application that given a number of pennies will calculate the minimum number of Sterling coins needed to make that amount.
+Eg. 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p
+
+
+== Requirements ==
+* Account for only the common £2, £1, 50p, 20p, 2p and 1p coins. Ignore £5 coins.
+
+* The user interface should consist of a input field that accepts an 'amount' string (Eg. 92p, £2.12) and displays the denominations needed when the user hits 'enter’.
+
+* Next use progressive enhancement to load the result into a Lightbox.

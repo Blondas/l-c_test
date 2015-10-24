@@ -1,7 +1,2 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chris
- * Date: 24/10/2015
- * Time: 11:34
- */
+include_once 'src/MoneyChanger/api.php';
