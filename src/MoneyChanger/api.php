@@ -12,11 +12,10 @@ if (!empty($_POST)) {
 
 if ( isset($post['money']) ) {
     try {
-        $money = new Money($post['money']);
+        $decoded = mb_convert_encoding($post['money'], "utf-8", "HTML-ENTITIES" );
         unset($post['money']);
 
-        echo 'amount: ' . $money->getAmount() . PHP_EOL;
-
+        $money = new Money($decoded);
         $money->exchangeMoney();
         $exchangeString = $money->getCoinsString();
 

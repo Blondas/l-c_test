@@ -7,15 +7,16 @@ class View
     {
         View::getInitialView();
 
-        $html = '<link rel="stylesheet" type="text/css" href="../style.css"/>';
+        $html = '<link rel="stylesheet" type="text/css" href="src/MoneyChanger/style.css">';
 
         $html .= '
-            <div id="response" class="white_content" onload="script();">' . $exchangeString . '</div>
+            <div id="response" onclick="window.location = window.location.href;" class="white_content" onload="script();">'
+            . htmlentities($exchangeString) .
+            '</div>
 
             <script>
-                console.log("dupa");
-                document.getElementById("light").style.display="block";
-                document.getElementById("fade").style.display="block"
+                document.getElementById("response").style.display="block";
+                document.getElementById("moneyChanger").style.display="block"
             </script>
         ';
 
@@ -39,7 +40,7 @@ class View
 
         $html .= '
             <div id="moneyChanger" class="black_overlay">
-                <form action="index.php" method="post">
+                <form action="index.php" method="post" class="black_overlay">
                     <input name="money" type="text">
                     <input type="submit">
                 </form>
