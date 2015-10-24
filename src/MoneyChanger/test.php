@@ -3,7 +3,6 @@ include_once 'Class/Money.php';
 include_once 'Class/View.php';
 
 use MoneyChanger\Money as Money;
-use MoneyChanger\View as View;
 
 $testArray = array(
     '4' => 4,

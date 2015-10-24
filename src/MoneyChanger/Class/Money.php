@@ -124,6 +124,7 @@ class Money
 
 
     /**
+     * Round pennies to two digit integer.
      * @param int $pennies
      * @return int
      */
@@ -155,6 +156,10 @@ class Money
     }
 
 
+    /**
+     * @param $coin One of available coin type.
+     * @return string
+     */
     private function coinToString($coin) {
 
         switch ($coin) {
